@@ -1,6 +1,28 @@
-/** Anax Flat theme.
+/**
+* Anax Flat theme.
 */
-@import url(base.less);
+@import url(modules.less);
+//
+
+#rm-menu {
+    width:auto!important;
+    height:auto!important;
+}
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
 
 
 @fontFamilyHeadings:  @fontFamilyGaramond;
@@ -12,26 +34,24 @@
 
 @color5:#000;
 @textC:@color5;
+@borderC:@color5;
+@colorLog:@color5;
+@colorLogHov:@color5;
 
 @color4:#333;
 @b1textColorHov:@color4;
-@colorLogHov:@color4;
 @colorLinkHov:@color4;
 
 @color3:#666;
 @b1textColor:@color3;
-@colorLog:@color3;
 @colorLink:@color3;
-
 
 @colorLinkVis:#999;
 @b1ColorHov:#ddd;
 
 @color2:#eee;
 @b1Color:@color2;
-@iwHeader2:@color2;
-@iwByline:@color2;
-@sFooter: @color2;
+
 
 @color1:#fff;
 @html: @color1;
@@ -44,12 +64,14 @@
 @nextPrev:@color1;
 @footerCW:@color1;
 @owFooter: @color1;
-@borderC:@color1;
+@iwHeader2:@color1;
+@iwByline:@color1;
+@sFooter: @color1;
+
 
 p, h1, h2, h3, h4, h5, h6, hr {
     color:@textC;
     border-color:@borderC !important;
-    font-family: Anton!important;
 }
 html {
     background-color: @html;

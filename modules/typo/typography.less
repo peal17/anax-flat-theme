@@ -16,19 +16,21 @@ body {
 .hgrid, .route-typography {
     background-image: url(../img/horisontal-grid-24.png);
 }
-
-
+@colorLink:#866;
+@colorLinkVis:#866;
+@colorLinkHov:#866;
 
 a {
     padding:0;
     margin-bottom:@magicNumber;
     text-decoration:none;
-    color:#866;
+    color:@colorLink;
     &:visited {
-        color:#900;
+        color:@colorLinkVis;
     }
     &:hover {
-        text-decoration:underline;
+        text-decoration:none;
+        color:@colorLinkHov;
     }
 }
 ul, li {

@@ -1,9 +1,17 @@
-@color1:#eed;
+
 .button1 (@color:grey; @dark:30%; @thick:5px; @radius:5px; ) {
     background-color: @color;
     border: @thick solid darken(@color, @dark);
     border-radius: @radius;
 }
+@colorLog:#900;
+@colorLogHov:#900;
+@fontLog: @fontFamilyGaramond;
+@b1Color:#eed;
+@b1textColor:#eed;
+@b1ColorHov:#eed;
+@b1textColorHov:#eed;
+@b1Font:@fontFamilyGaramond;
 
 .logo-1 {
     display:none;
@@ -24,7 +32,11 @@
         padding:0;
         margin:0;
         padding-right: 1em;
-        color:#900;
+        color:@colorLog;
+        font-family: @fontLog;
+    }
+    & a:hover {
+        color:@colorLogHov;
     }
 }
 
@@ -32,12 +44,15 @@
     float:left;
     & li {
         & a {
-            .button1(@color1;5%;3px;5px);
+            .button1(@b1Color;5%;3px;5px);
             //box-shadow: .2em .2em .2em black;
+            color:@b1textColor;
+            font-family: @b1Font;
             margin: .3em;
             padding: .2em;
             &:hover {
-                background-color: darken(@color1, 3%);
+                .button1(@b1ColorHov;5%;3px;5px);
+                color:@b1textColorHov;
                 text-decoration: none;
             }
         }
