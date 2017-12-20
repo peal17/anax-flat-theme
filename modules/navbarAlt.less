@@ -1,0 +1,61 @@
+
+.button1 (@color:grey; @dark:30%; @thick:5px; @radius:5px; ) {
+    background-color: @color;
+    border: @thick solid darken(@color, @dark);
+    border-radius: @radius;
+}
+@colorLog:#900;
+@colorLogHov:#900;
+@fontLog: @fontFamilyGaramond;
+@b1Color:#eed;
+@b1textColor:#eed;
+@b1ColorHov:#eed;
+@b1textColorHov:#eed;
+@b1Font:@fontFamilyGaramond;
+
+.logo-1 {
+    display:none;
+}
+.flash-wrap img {
+    max-width:100%;
+}
+
+
+.site-logo-text {
+    float:left;
+    &-icon {
+        padding-right:.3em;
+    }
+    & a, a:visited, a:hover {
+        text-decoration: none;
+        font-size: 6em;
+        padding:0;
+        margin:0;
+        padding-right: 1em;
+        color:@colorLog;
+        font-family: @fontLog;
+    }
+    & a:hover {
+        color:@colorLogHov;
+    }
+}
+
+.navbar2 {
+    float:left;
+    & li {
+        & a {
+            .button1(@b1Color;5%;2px;5px);
+            //box-shadow: .2em .2em .2em black;
+            color:@b1textColor;
+            font-family: @b1Font;
+            font-size: 16px !important;
+            margin: 2px;
+            padding: 2px;
+            &:hover {
+                .button1(@b1ColorHov;5%;2px;5px);
+                color:@b1textColorHov;
+                text-decoration: none;
+            }
+        }
+    }
+}

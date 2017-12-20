@@ -1,0 +1,244 @@
+@import "typo/typography-mixins.less";
+@import "grid-helpers.less";
+@mediaPx:680px;
+@maxW:760px;
+
+.wrap-all, {
+    max-width:@maxW;
+    padding:0;
+    margin:auto;
+}
+
+.inner-wrap {
+    @gridWidth:@maxW;
+    @gridImg: "..//img/grid950x24x30x10-nomargin.png";
+    .grid(@gridWidth);
+    html.vgrid & {
+        .showGrid(@gridWidth, @gridImg);
+    }
+}
+.row {
+    .row();
+}
+
+ .navbar2
+ .flash-wrap,
+ .flash-wrap img,
+ .site-footer,
+ .breadcrumb-list,
+ .footer-column-wrapper {
+     .column(24);
+ }
+
+
+.site-logo-text {
+    .column(10);
+    &-icon img{
+        // vertical-align:top !important;
+        height:@magicNumber*2;
+        //     width:100px;
+        //     height:100px!important;
+    }
+    & a, a:visited, a:hover {
+        font-size:30px;
+    }
+}
+.navbar2 {
+    .column(14);
+    & li a {
+    @height: 60px;
+    .calcMargin(@height);
+    & ul {
+        margin-bottom:0!important;
+    }
+
+    //margin:@margin/2 !important;
+    }
+}
+.flash-wrap {
+    height:@magicNumber*6;
+    & img {
+        object-fit: cover;
+        height:@magicNumber*6;
+        //width:100%;
+        max-width: none;
+    }
+}
+@media screen and (max-width:@mediaPx) {
+    .site-logo-text {
+        .column(24);
+        &-icon {
+            padding-right:.1em;
+        }
+        & a {
+            padding-right:0;
+        }
+    }
+    .navbar2 {
+        display:none;
+    }
+}
+
+
+
+.breadcrumb-list {
+    margin:@magicNumber 0;
+    .column(23);
+    .push(1);
+    overflow:auto;
+    & li {
+        float:left;
+    }
+    & li:before {
+        content: "//";
+    }
+}
+.sidebar-left {
+    //width:auto;
+    .column(4);
+    .push(2);
+    margin-top:@magicNumber*3;
+    margin-bottom:@magicNumber - 1px;
+    // padding-right:2em;
+    // padding-bottom:0;
+    border-right: 1px solid black;
+}
+.main {
+    .column(20);
+    .push(2);
+    &.has-sidebar {
+    .column(15);
+    .push(1);
+    }
+}
+article {
+    min-height:@magicNumber*12;
+    overflow:auto;
+    padding:0;
+    margin-bottom:@magicNumber;
+}
+.imgRight {
+    float:right;
+    margin-left:40px;
+    height: @magicNumber*8;
+    // margin-top:@magicNumber;
+    margin-bottom:@magicNumber;
+}
+.imgAnalysis {
+    float:none;
+    display: block;
+    margin:auto;
+    border:3px dashed grey;
+    height: @magicNumber*14;
+    margin-top:@magicNumber;
+    margin-bottom:@magicNumber;
+}
+.next {
+    .column(9);
+     float: right;
+     text-align: right;
+    // & a {
+    //     text-align: right;
+    //     }
+    height:@magicNumber*2;
+}
+
+.previous {
+    .column(9) !important;
+    .push(6)!important;
+    // float: left;
+    //clear:both !important;
+    height:@magicNumber*2;
+}
+
+@media screen and (max-width: @mediaPx) {
+    .main {
+        &.has-sidebar {
+            .column(20);
+            .push(2);
+        }
+    }
+
+    .imgRight {
+         float:none;
+         display: block;
+         margin:auto;
+         margin-bottom:0;
+    }
+    .sidebar-left {
+        .column(12);
+        .push(2);
+        margin-top:0;
+        border:none;
+        border-bottom: 1px solid black;
+    }
+    .previous {
+        .column(12) !important;
+        .push(0) !important;
+    }
+}
+
+
+
+
+
+.byline {
+    .column(15);
+    .push(7);
+    hyphens: auto;
+    padding:(@magicNumber) 0 @magicNumber 0 ;
+     // border-top: 1px solid black;
+    overflow:auto;
+    margin-bottom:@magicNumber;
+    & p {
+        margin:0;
+    }
+    & figure {
+        float:left;
+    }
+.byDiv {
+    float:left;
+    width:100px;
+    height:@magicNumber*5;
+    overflow:hidden;
+    margin:0 15px 0 0;
+    }
+}
+.footer-column {
+        .column(7);
+        .push(1);
+        min-width:170px;
+        & ul {
+            margin-bottom:@magicNumber;
+        }
+    &-wrapper {
+        // background-color: #bdf;
+        opacity:.6;
+        display:block;
+        padding-top:@magicNumber;
+        margin-bottom:@magicNumber;
+    }
+}
+
+.site-footer {
+    text-align: center;
+    padding-bottom:@magicNumber;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-type: none;
+    }
+
+    li {
+        display: inline;
+    }
+}
+
+
+@media screen and (max-width: @mediaPx) {
+     .byline {
+         .column(20);
+         .push(2);
+     }
+
+}

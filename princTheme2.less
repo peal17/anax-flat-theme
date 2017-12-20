@@ -1,0 +1,85 @@
+/**
+* Anax Flat theme.
+*/
+@import url(baseAlt.less);
+
+.wrap-all {
+    background-image: url(../img/pixl.png);
+    background-size: 192px;
+    // background-attachment: fixed;
+}
+
+.inner-wrap-header,
+.inner-wrap-breadcrumb {
+    background-color: rgba(255*1, 255*1, 255*1, .2);
+    box-shadow: 4px 4px 8px 12px grey;
+}
+
+article,
+.byline {
+    background-color: rgba(255*1, 255*1, 255*1, .3);
+    box-shadow: 4px 4px 8px 12px grey;
+}
+
+
+.inner-wrap-main {
+    background-color: rgba(255*0, 255*0, 255*0, .1);
+    box-shadow: 4px 4px 8px 12px grey;
+}
+.inner-wrap-after-main{
+    background-color: rgba(255*0, 255*0, 255*0, .1);
+    box-shadow: 4px 4px 8px 12px grey;
+}
+.footer-column-wrapper{
+    background-color: rgba(255*0, 255*0, 255*0, .2);
+    box-shadow: 4px 4px 8px 12px grey;
+}
+.site-footer {
+    background-color: rgba(255*0, 255*0, 255*0, .4);
+    box-shadow: 4px 4px 8px 12px grey;
+}
+
+article:before {
+    background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/AnaximanderRelief.jpg/1200px-AnaximanderRelief.jpg);
+    background-size: 72px 72px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    padding-bottom:16px;
+    content:"";
+}
+.byline {
+    padding-bottom:0;
+    &:after {
+        background-image:url(../img/favicon/mitad.jpg);
+        background-size: 48px 48px;
+        display: inline-block;
+        float:right;
+        background-repeat: no-repeat;
+        width: 48px;
+        height: 48px;
+        content:"";
+    }
+}
+.next-previous,
+.outer-wrap-footer,
+.inner-wrap-footer {
+    background-color: rgba(255*.7, 255*.7, 255*.7, 0);
+}
+
+.sidebar-left {
+    border: 0 solid black;
+}
+
+@maxW:100%;
+
+@colorLinkHov:#930;
+@colorLink:#610;
+@colorLinkVis:#610;
+
+@colorH1BorderBottom: #000;
+@colorH2BorderBottom: #000;
+
+@borderSizeH1: 0;
+@borderSizeH2: 0;

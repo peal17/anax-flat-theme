@@ -1,0 +1,142 @@
+/**
+* Anax Flat theme.
+*/
+@import url(baseAlt.less);
+
+ .inner-wrap-header,  {
+    background-image: url(../img/pixl.png);
+    background-size: 192px;
+}
+
+.wrap-all  {
+    background-image: url(../img/pixl.png);
+    background-size: 576px;
+}
+
+ .byline {
+    padding:0;
+    background-image: url(../img/pixl.png);
+    background-size: 96px;
+    box-shadow: 0 0 20px 0 lightgrey;
+}
+
+.site-footer {
+   background-image: url(../img/pixl.png);
+   background-size: 96px;
+}
+// article {
+//     background-image: url(../img/pixl.png);
+//     background-size: 576px;
+// }
+
+article,
+.inner-wrap-breadcrumb,
+.footer-column-wrapper,
+.inner-wrap-main,
+.next-previous,
+.inner-wrap-after-main {
+    background-color: rgba(255*.3, 255*.3, 255*.3, 0);
+}
+
+// article:before {
+//     background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/AnaximanderRelief.jpg/1200px-AnaximanderRelief.jpg);
+//     background-size: 48px 48px;
+//     background-repeat: no-repeat;
+//     display: inline-block;
+//     width: 48px;
+//     height: 48px;
+//     padding-bottom:16px;
+//     content:"";
+// }
+// .byline {
+//     padding-bottom:0;
+//     &:after {
+//         background-image:url(../img/favicon/mitad.jpg);
+//         background-size: 48px 48px;
+//         display: inline-block;
+//         float:right;
+//         background-repeat: no-repeat;
+//         width: 48px;
+//         height: 48px;
+//         content:"";
+//     }
+// }
+.next-previous,
+.outer-wrap-footer,
+.inner-wrap-footer {
+    background-color: rgba(255*.7, 255*.7, 255*.7, 0);
+}
+
+.sidebar-left {
+    border: 0 solid black;
+}
+
+
+.site-logo-text {
+    width:auto;
+    &-icon img{
+        vertical-align:top !important;
+        height:@magicNumber*3;
+        // display:inline-block;
+        //     width:100px;
+        //     height:100px!important;
+    }
+    & a, a:visited, a:hover {
+        font-size:3em;
+    }
+}
+.navbar2 {
+    width:40%;
+    & li a {
+    @height: 60px;
+    .calcMargin(@height);
+    & ul {
+        margin-bottom:0!important;
+    }
+    }
+}
+
+@media screen and (max-width:@mediaPx) {
+    .site-logo-text {
+        .column(24);
+        &-icon img {
+            padding-right:.1em;
+            height:@magicNumber*3;
+        }
+        & a, a:visited, a:hover {
+            padding-right:0;
+            font-size:3em;
+        }
+    }
+    .navbar2 {
+        display:none;
+    }
+}
+
+@maxW:100%;
+
+@colorLinkHov:#930;
+@colorLink:#610;
+@colorLinkVis:#610;
+
+@colorH1BorderBottom: #000;
+@colorH2BorderBottom: #000;
+
+@borderSizeH1: 0;
+@borderSizeH2: 0;
+
+
+@fontSizeH1: 8em;
+@fontSizeH2: 1.875em;
+@fontSizeH3: 1.375em;
+@fontSizeH4: 1.25em;
+@fontSizeH5: 1em;
+@fontSizeH6: 0.875em;
+
+@fontSizeCodeInline:  @fontSizeBody;
+@fontSizeCodeBlock:   @fontSizeBody;
+@lineHeightCodeBlock: @lineHeight;
+
+@fontSizeSupSub: 0.75em;
+
+@fontSizeSmall: 0.875em;

@@ -1,0 +1,212 @@
+/**
+* Anax Flat theme.
+*/
+@import url(normalize.less);
+@import url(responsive-menu.less);
+@import url(figure.less);
+@import url(grid-helpers.less);
+@import url(navbarAlt.less);
+@import url(layoutAlt.less);
+@import url(typo/typography.less);
+//
+
+#rm-menu {
+    width:auto!important;
+    height:auto!important;
+}
+.word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+article {
+.word-wrap();
+}
+
+//
+// @fontFamilyHeadings:  @fontFamilyGaramond;
+// @fontFamilyBody:      @fontFamilyHelvetica;
+// @fontFamilyCode:      @fontFamilyCourier;
+// @b1Font:              @fontFamilyGaramond;
+// @fontLog:             @fontFamilyGaramond;
+//
+//
+// @color5:#000;
+// @textC:@color5;
+// @borderC:@color5;
+// @colorLog:@color5;
+// @colorLogHov:@color5;
+//
+// @color4:#333;
+// @b1textColorHov:@color4;
+// @colorLinkHov:@color4;
+//
+// @color3:#666;
+// @b1textColor:@color3;
+// @colorLink:@color3;
+//
+// @colorLinkVis:#999;
+// @b1ColorHov:#ddd;
+//
+// @color2:#eee;
+// @b1Color:@color2;
+//
+//
+// @color1:#fff;
+// @html: @color1;
+// @wrapAll:@color1;
+// @iwHeader:@color1;
+// @breadcrumb:@color1;
+// @iwMain:@color1;
+// @article:@color1;
+// @iwAfterMain:@color1;
+// @nextPrev:@color1;
+// @footerCW:@color1;
+// @owFooter: @color1;
+// @iwHeader2:@color1;
+// @iwByline:@color1;
+// @sFooter: @color1;
+//
+
+
+
+
+
+
+
+
+@fontFamilyHeadings:  Anton;
+@fontFamilyBody:      Josefin Sans;
+@b1Font:              Anton;
+@fontLog:             Abril Fatface;
+@fontFamilyCode:      @fontFamilyCourier;
+
+
+
+@color5:#000;
+@textC:@color5;
+
+
+
+@color4:#333;
+@b1textColorHov:@color4;
+@colorLogHov:@color4;
+
+
+@color3:#666;
+@b1textColor:@color3;
+@colorLog:@color3;
+@colorLinkHov:@color3;
+
+@colorLink:#999;
+@colorLinkVis:#999;
+@b1ColorHov:#ddd;
+
+@color2:#eee;
+@b1Color:@color2;
+@iwHeader2:@color2;
+@iwByline:@color2;
+
+@sFooter: #fff;
+
+@color1:#ddd;
+@html: @color1;
+@wrapAll:@color1;
+@footerCW:@color1;
+@owFooter: @color1;
+@borderC:@color1;
+
+@color1b:#fff;
+@iwHeader:@color1b;
+@iwAfterMain:@color1b;
+@article:@color1b;
+@breadcrumb:@color1b;
+@iwMain:@color1b;
+@nextPrev:@color1b;
+
+
+
+
+@colorLog:#111;
+@colorLogHov:#044;
+
+// p, H1 {
+//     color:#044;
+// }
+
+@textC:#044;
+
+
+p, h1, h2, h3, h4, h5, h6, hr {
+    color:@textC;
+    border-color:@borderC !important;
+}
+html {
+    background-color: @html;
+}
+.wrap-all {
+    background-color: @wrapAll;
+    max-width: none;
+}
+.inner-wrap-header {
+    background-color: @iwHeader;
+}
+@media screen and (max-width: @mediaPx) {
+    .inner-wrap-header {
+        background-color: @iwHeader2;
+    }
+}
+.inner-wrap-breadcrumb {
+    background-color: @breadcrumb;
+}
+.inner-wrap-main {
+    background-color: @iwMain;
+}
+article {
+    background-color: @article;
+}
+.next-previous {
+    .column(24);
+    background-color: @nextPrev;
+}
+.inner-wrap-after-main {
+    background-color: @iwAfterMain;
+}
+.byline {
+    background-color: @iwByline;
+}
+.footer-column-wrapper {
+    background-color: @footerCW;
+    margin-bottom:0;
+    opacity: 1;
+}
+.outer-wrap-footer, .inner-wrap-footer {
+    background-color: @owFooter;
+    width: 100%;
+    max-width: none;
+}
+.site-footer {
+    background-color: @sFooter;
+    padding-top:@magicNumber;
+    width: 100%;
+}
